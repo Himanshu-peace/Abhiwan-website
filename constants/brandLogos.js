@@ -1,0 +1,31 @@
+
+
+export const BRAND_LOGOS = [
+    "69q22xj190gb254/walker_e1zjwdiej3.webp",
+    "75ltd4k870djm46/vulcane_fight_league_6lxncjdrnb.webp",
+    "233u031vgthi977/vaseline_uaz9ua8nju.webp",
+    "73i596m0b2o65l0/studds_hic6gyejkm.webp",
+    "rmj0je984jet0q3/stripto_sdqplk9c1r.webp",
+    "u56k20f3c11ey63/philip_qpekd0ea8d.webp",
+    "65fq7xdzy89vsna/penguin_karts_xtr0d1xouc.webp",
+    "93kg4q5ej8i56zw/ogilvy_c42dlrt3wn.webp",
+    "9018ycqxk8cwkpx/mbrh_4gpk1tyo4h.webp",
+    "08954xd78jilt44/luxor_xg30nmgaub.webp",
+    "5657476euk63o75/jio_tgha9q6n9k.webp",
+    "d1u3bel75sz498s/iskon_12olpmilkp.webp",
+    "5s55f2211a9m222/gl_homes_nrx016p3qw.webp",
+    "691z8rz4q38p7s8/etisalat_oscvwlnyvg.webp",
+    "cs4n35q9bn729n5/elixir_car_y108pxx1cm.webp",
+    "c2925804pwg94nv/eduvr_logo_6_2jhpdo0c9t.webp",
+    "q0eu6k6z819b5m2/dp_world_nb3dakbmpt.webp",
+    "ge03ps1mzlcwyzu/dainik_jagran_jmqwo0i0gx.webp",
+    "20ofrdz14388osc/coca_cola_4ub85h1p0c.webp",
+    "0yyeupw27w8hfpb/cloud_c4bv393ia9.webp",
+    "0n46d3h172083ha/battle_saga_d51v6lljvc.webp",
+    "79155r8wor7k728/bajaj_finserv_hib1zfzsbk.webp",
+    "nn6xdsoe2ed1283/arsenal_yj738678a9.webp",
+    "40ave462eu660f4/army_597qv2vbdr.webp",
+    "fub3uo99nicd63z/aiims_ma0e3vtcfo.webp",
+    "y4xgmpl18d6l087/abu_dhabi_police_irp3zxofzz.webp",
+    "61ro7e78m526kst/thums_up_2mp7gn0k7p.webp"
+]

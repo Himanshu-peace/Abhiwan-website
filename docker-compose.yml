@@ -1,0 +1,13 @@
+services:
+  web:
+    container_name: abhiwan-revamp-website
+    build: .
+    cpu_period: 50000
+    cpu_quota: 25000
+    mem_limit: 4000m
+    restart: always
+    environment:
+      - NODE_ENV=production
+    command: npm start
+    ports:
+      - "3026:3026"
