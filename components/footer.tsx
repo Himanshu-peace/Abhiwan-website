@@ -138,15 +138,15 @@ export default function Footer() {
                 {item.country === "INDIA" && (
                   <span
                     className="
-    block
-    mt-0.5
-    text-[13px]
-    leading-[15px]
-    font-semibold
-    font-inter
-    text-white
-    text-center
-  "
+                      block
+                      mt-0.5
+                      text-[13px]
+                      leading-[15px]
+                      font-semibold
+                      font-inter
+                      text-white
+                      text-center
+                    "
                   >
                     (Head Office)
                   </span>

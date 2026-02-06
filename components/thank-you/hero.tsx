@@ -1,5 +1,11 @@
 `use client`
 // import React from "react";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
 
 function HeroSection() {
   return (
@@ -24,10 +30,10 @@ function HeroSection() {
               <span className=" font-sans">You’ve Made It Here!</span>
             </div>
 
-            <h1 className=" font-futura text-[40px] font-medium leading-tight tracking-tight text-gray-900 sm:text-6xl">
-              <span className="md:text-7xl">Thank You!</span>
+            <h1 className={`${poppins.className} text-[40px]  leading-tight tracking-tight text-gray-900 sm:text-6xl` }>
+              <span className="md:text-7xl font">Thank You!</span>
               <br />
-              <span>For Reaching Out!</span>
+              <span className="font-semibold">For Reaching Out!</span>
             </h1>
 
             <p className="mt-6 max-w-xl text-base leading-relaxed text-gray-600">

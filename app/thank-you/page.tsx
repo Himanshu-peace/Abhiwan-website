@@ -3,7 +3,7 @@ import React from "react";
 
 import Hero from "../../components/thank-you/hero";
 import Blogs from "../../components/thank-you/blogs";
-import PortfolioSection from "../../components/thank-you/portfoliosection";
+import PortfolioSection from "../../components/thank-you/portfolioSection1";
 
 export default function Thankyou() {
     return (
