@@ -1,0 +1,7 @@
+user.email=ny6873964@gmail.com
+user.name=Himanshu Yadav
+filter.lfs.required=true
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+http.postbuffer=157286400

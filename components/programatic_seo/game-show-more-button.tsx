@@ -19,7 +19,7 @@ export default function GameShowMoreButton() {
   return (
     <div className="flex justify-center mt-10 sm:mt-16 lg:mt-20">
       <button
-        className="w-[150px] h-[54px] rounded-full border-[2.32px] border-[#626262] text-[#626262] font-medium text-base flex items-center justify-center transition-all duration-300 ease-in-out active:scale-95"
+        className="w-37.5 h-13.5 rounded-full border-[2.32px] border-[#626262] text-[#626262] font-medium text-base flex items-center justify-center transition-all duration-300 ease-in-out active:scale-95"
         onClick={handleClick}
       >
         Show More

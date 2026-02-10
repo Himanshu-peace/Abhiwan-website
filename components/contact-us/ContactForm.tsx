@@ -39,8 +39,8 @@ export default function ContactForm() {
         </div>
 
         <div className="bg-[#2a2f4a]/30 backdrop-blur-sm rounded-3xl overflow-hidden">
-          <div className="grid lg:grid-cols-[40%_60%] gap-12 items-center">
-            <div className="  mr-5 ml-20 ">
+          <div className="lg:grid lg:grid-cols-[40%_60%] lg:gap-12 items-center">
+            <div className="max-lg:p-8 lg:mr-5 lg:ml-15 ">
               <div>
                 <h3 className="text-2xl font-bold mb-2">
                   Let&apos;s connect !
@@ -112,15 +112,15 @@ export default function ContactForm() {
               </form>
             </div>
 
-            <div className="relative ml-5 my-8 mr-20">
-              <div className="relative h-[500px] rounded-2xl overflow-hidden">
+            <div className="relative max-lg:p-8 lg:ml-5 lg:my-8 lg:mr-20">
+              <div className="relative h-125 rounded-2xl overflow-hidden">
                 <Image
                   src="/contact-us/get-in-touch.jpg"
                   alt="VR Experience"
                   fill
                   className="h-full w-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-purple-900/50 to-transparent" />
               </div>
             </div>
           </div>

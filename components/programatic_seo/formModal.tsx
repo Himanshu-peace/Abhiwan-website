@@ -11,6 +11,7 @@ import { CERTIFICATIONS } from "@/constants/hero_secConst"
 import Image from "next/image"
 import CountryFlag from "react-country-flag"
 import { testimonialsGame } from "@/constants/testimonial"
+import { div } from "framer-motion/client"
 
 const countries = [
     { code: 'IN', name: 'India', isd: '+91' },
@@ -248,7 +249,7 @@ export default function LeadModal() {
                             duration: 0.4,
                             ease: "easeOut",
                         }}
-                        className="relative w-full max-w-5xl bg-white rounded-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2 shadow-2xl max-h-[calc(100vh-5rem)] md:max-h-[90vh]  mx-auto"
+                        className="relative w-full max-w-5xl bg-white rounded-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2 shadow-2xl max-h-[calc(100vh-4rem)] sm:max-h-[calc(100vh-4rem)] md:max-h-[95vh] mx-auto "
                         onClick={(e) => e.stopPropagation()}
                         style={{ marginTop: "env(safe-area-inset-top, 0)" }}
                     >
@@ -263,19 +264,19 @@ export default function LeadModal() {
 
                         {/* LEFT FORM */}
                         {/* LEFT FORM */}
-                        <div className="flex flex-col h-full p-6 sm:p-8 md:p-10">
+                        <div className="flex flex-col h-full p-4 sm:p-6 md:p-8 lg:p-10">
                             <div className="shrink-0">
-                                <h2 className="text-2xl sm:text-3xl font-bold text-[#0b0b3b] leading-snug">
+                                <h2 className="text-md sm:text-lg md:text-xl font-bold text-[#0b0b3b] leading-snug">
                                 Have an idea buzzing in your head?
                                 Let's make it happen!
                             </h2>
                             </div>
 
-                            <form onSubmit={handleSubmit} className="flex flex-col flex-1 justify-between mt-6 space-y-4">
+                            <form onSubmit={handleSubmit} className="flex flex-col flex-1 justify-between mt-4 sm:mt-5 space-y-3 sm:space-y-4">
                                 <div className="space-y-2">
                                     {/* FULL NAME */}
                                     <div>
-                                        <label className="text-sm font-medium text-gray-700">
+                                        <label className="text-xs sm:text-sm font-medium text-gray-700">
                                             Full name<span className="text-red-500">*</span>
                                         </label>
                                         <input
@@ -283,7 +284,7 @@ export default function LeadModal() {
                                             type="text"
                                             value={formData.fullName}
                                             onChange={handleChange}
-                                            className={`mt-1 w-full rounded-lg border px-4 py-3 text-sm focus:ring-2 focus:ring-blue-500 outline-none ${errors.fullName ? 'border-red-500' : 'border-gray-300'}`}
+                                            className={`mt-1 w-full rounded-lg border px-4 py-2 sm:py-2.5 md:py-3 text-sm focus:ring-2 focus:ring-blue-500 outline-none ${errors.fullName ? 'border-red-500' : 'border-gray-300'}`}
                                             placeholder="Exp. John Carter"
                                             required
                                         />
@@ -294,7 +295,7 @@ export default function LeadModal() {
 
                                     {/* EMAIL */}
                                     <div>
-                                        <label className="text-sm font-medium text-gray-700">
+                                        <label className="text-xs sm:text-sm font-medium text-gray-700">
                                             Email<span className="text-red-500">*</span>
                                         </label>
                                         <input
@@ -302,7 +303,7 @@ export default function LeadModal() {
                                             type="email"
                                             value={formData.email}
                                             onChange={handleChange}
-                                            className={`mt-1 w-full rounded-lg border px-4 py-3 text-sm focus:ring-2 focus:ring-blue-500 outline-none ${errors.email ? 'border-red-500' : 'border-gray-300'}`}
+                                            className={`mt-1 w-full rounded-lg border px-4 py-2 sm:py-2.5 md:py-3 text-sm focus:ring-2 focus:ring-blue-500 outline-none ${errors.email ? 'border-red-500' : 'border-gray-300'}`}
                                             placeholder="Enter your email"
                                             required
                                         />
@@ -313,7 +314,7 @@ export default function LeadModal() {
 
                                     {/* REQUIREMENT */}
                                     <div>
-                                        <label className="text-sm font-medium text-gray-700">
+                                        <label className="text-xs sm:text-sm font-medium text-gray-700">
                                             Requirement<span className="text-red-500">*</span>
                                         </label>
                                         <div className="relative">
@@ -329,7 +330,7 @@ export default function LeadModal() {
                                                     setTimeout(() => setIsSelectOpen(false), 200);
                                                 }}
                                                 className={`
-                                                    mt-1 w-full rounded-lg border px-4 py-3 text-sm focus:ring-2 focus:ring-blue-500 outline-none appearance-none pr-10
+                                                    mt-1 w-full rounded-lg border px-4 py-2 sm:py-2.5 md:py-3 text-sm focus:ring-2 focus:ring-blue-500 outline-none appearance-none pr-10
                                                     ${!formData.requirement ? 'text-gray-400' : 'text-black'}
                                                     ${errors.requirement ? 'border-red-500' : 'border-gray-300'}
                                                 `}
@@ -378,13 +379,13 @@ export default function LeadModal() {
 
                                     {/* PHONE WITH COUNTRY - Matching HeroForm style */}
                                     <div>
-                                        <label className="text-sm font-medium text-gray-700">
+                                        <label className="text-xs sm:text-sm font-medium text-gray-700">
                                             Phone number<span className="text-red-500">*</span>
                                         </label>
 
                                         <div className="flex gap-2 w-full">
                                             {/* COUNTRY DROPDOWN - Same as HeroForm */}
-                                            <div className="relative w-[80px] flex-shrink-0">
+                                            <div className="relative w-20 shrink-0">
                                                 <select
                                                     value={selectedCountry.code}
                                                     onChange={(e) => {
@@ -393,7 +394,7 @@ export default function LeadModal() {
                                                     }}
                                                     className="
                                                         w-full bg-white border border-gray-300 rounded-md
-                                                        pl-2 pr-10 py-3 text-black text-xs
+                                                        pl-2 pr-10 py-2 sm:py-2.5 md:py-3 text-black text-xs
                                                         focus:ring-2 focus:ring-blue-500 focus:outline-none
                                                         appearance-none cursor-pointer z-40
                                                     "
@@ -434,7 +435,7 @@ export default function LeadModal() {
                                                 value={formData.phone}
                                                 onChange={handleChange}
                                                 className={`
-                                                    flex-1 rounded-md border border-gray-300 px-4 py-3 text-sm
+                                                    flex-1 rounded-md border border-gray-300 px-4 py-2 sm:py-2.5 md:py-3 text-sm
                                                     focus:ring-2 focus:ring-blue-500 focus:outline-none
                                                     ${errors.phone ? 'border-red-500' : ''}
                                                 `}
@@ -446,22 +447,22 @@ export default function LeadModal() {
                                             <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
                                         )}
                                     </div>
-                                    <div className="shrink-0 pt-3">
+                                    <div className="shrink-0  ">
                                         {/* INFO */}
-                                        <ul className="pt-2 text-sm text-gray-600 space-y-1">
+                                        <ul className="pt-2 sm:text-xs text-gray-600 space-y-1">
                                             <li>✓ Get a response in few minutes.</li>
                                             <li>✓ Your idea stays 100% protected under NDA.</li>
                                         </ul>
 
                                         {/* NDA */}
-                                        <label className="flex items-center gap-2 text-sm text-gray-600 cursor-pointer">
-                                            <input type="checkbox" defaultChecked className="w-4 h-4" />
+                                        <label className="flex items-center gap-2 text-xs sm:text-sm text-gray-600 cursor-pointer">
+                                            <input type="checkbox" defaultChecked className="w-4 h-4 sm:w-3 sm:h-3 lg:w-4 lg:h-4" />
                                             Receive a copy of the NDA for full security
                                         </label>
 
                                         {/* SUBMIT MESSAGE */}
                                         {submitMessage && (
-                                            <div className={`p-3 rounded-lg text-sm ${submitMessage.includes('success') ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+                                            <div className={`p-3 rounded-lg text-xs sm:text-sm ${submitMessage.includes('success') ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
                                                 {submitMessage}
                                             </div>
                                         )}
@@ -470,7 +471,7 @@ export default function LeadModal() {
                                         <button
                                             type="submit"
                                             disabled={isSubmitting}
-                                            className="mt-4 w-full rounded-lg bg-[#2f5bff] py-3 text-white font-semibold hover:bg-[#2448d8] transition disabled:opacity-50 disabled:cursor-not-allowed"
+                                            className="mt-1 sm:mt-2 w-full rounded-lg bg-[#2f5bff] py-3 text-white font-semibold hover:bg-[#2448d8] transition disabled:opacity-50 disabled:cursor-not-allowed"
                                         >
                                             {isSubmitting ? 'Submitting...' : 'Submit'}
                                         </button>
@@ -504,26 +505,26 @@ export default function LeadModal() {
                         </div>
 
                         {/* RIGHT PANEL */}
-                        <div className="hidden md:flex flex-col p-12 bg-gradient-to-br from-[#050816] to-[#0b1025] text-white relative overflow-hidden">
+                        <div className="hidden md:flex flex-col py-12 px-12 bg-linear-to-br from-[#050816] to-[#0b1025] text-white relative overflow-hidden">
                             <Image src="/modal.jpg" alt="" fill className="object-cover" />
                             <div className="absolute top-0 right-0 w-64 h-54 bg-blue-500/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
                             <div className="absolute bottom-0 left-0 w-64 h-54 bg-blue-600/10 rounded-full -ml-32 -mb-32 blur-3xl"></div>
 
                             <div className="relative z-10 flex flex-col h-full">
                                 <div className="flex-1 flex flex-col justify-center">
-                                    <h3 className="text-2xl font-black uppercase text-[#268BFF] text-center">
+                                    <h3 className="text-lg sm:text-xl lg:text-2xl font-black uppercase text-[#268BFF] text-center">
                                         Still deciding?
                                     </h3>
-                                    <p className="text-gray-300 mt-3 leading-relaxed">
+                                    <p className="text-gray-300 mt-2 md:mt-3 sm:text-xs md:text-md leading-relaxed">
                                         Discover why client choose abhiwan for innovative and digital Solutions.
                                     </p>
 
                                     {/* TESTIMONIALS SLIDER */}
-                                    <div className="relative mt-8">
+                                    <div className="relative sm:mt-4 md:mt-6">
                                         {/* LEFT ARROW */}
                                         <button
                                             onClick={prevTestimonial}
-                                            className="absolute -left-11 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white/10 transition"
+                                            className="absolute sm:-left-10 top-1/2 -translate-y-1/2 z-10 w-8 h-8 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white/10 transition"
                                         >
                                             <ChevronLeft size={20} />
                                         </button>
@@ -542,9 +543,9 @@ export default function LeadModal() {
                                                     border border-white/10
                                                     shadow-xl
                                                     flex flex-col
-                                                    p-6
-                                                    w-[408.98px]
-                                                    h-[282.14px]
+                                                    p-2 
+                                                    lg:w-[408.98px]
+                                                    lg:h-[282.14px]
                                                     rounded-[11.6px]
                                                 "
                                             >
@@ -555,7 +556,8 @@ export default function LeadModal() {
                                                         flex-1
                                                         font-[Helvetica]
                                                         font-normal
-                                                        text-[13.06px]
+                                                        sm:text-[10.06px]
+                                                        md:text-[13.06px]
                                                         leading-[1.3]
                                                         tracking-[0.02em]
                                                     "
@@ -613,7 +615,7 @@ export default function LeadModal() {
                                         {/* RIGHT ARROW */}
                                         <button
                                             onClick={nextTestimonial}
-                                            className="absolute -right-11 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white/10 transition"
+                                            className="absolute sm:-right-11 lg:-right-11 top-1/2 -translate-y-1/2 z-10 w-8 h-8 md:w-10 md:h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white/10 transition"
                                         >
                                             <ChevronRight size={20} />
                                         </button>
@@ -622,7 +624,7 @@ export default function LeadModal() {
 
                                 {/* CERTIFICATIONS — DESKTOP */}
                                 <div
-                                    className="mt-2 shrink-0 grid grid-flow-col auto-cols-max items-center justify-start gap-4 bg-[#1D2135] px-4 py-5 rounded-xl overflow-hidden"
+                                    className="mt-2 shrink-0 grid grid-flow-col auto-cols-max items-center justify-start gap-3 bg-[#1D2135] px-2 lg:px-3 py-5 rounded-xl overflow-hidden"
                                     style={{
                                         border: "1px solid",
                                         borderImageSource: "linear-gradient(90deg,#181632 0%,#cccccc 50%,#181632 100%)",
@@ -634,7 +636,7 @@ export default function LeadModal() {
                                             key={cert.name}
                                             src={process.env.NEXT_PUBLIC_CDN_URL + cert.image}
                                             alt={cert.name}
-                                            className="h-12 sm:h-14 md:h-16 object-contain" // responsive height
+                                            className="h-7  lg:h-12 object-contain" // responsive height
                                             style={{ width: "auto" }} // maintain aspect ratio
                                         />
                                     ))}

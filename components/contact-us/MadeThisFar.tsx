@@ -13,23 +13,25 @@ export default function MadeThisFar() {
   ]
 
   return (
-    <section className="py-20 px-4 bg-[#1a1f3a]">
+    <section className="px-6 bg-[#2D2D48]">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-[60%_40%] gap-12 items-center p-8">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              You have made <span className="text-purple-500">this far!</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              You have <span className="bg-[linear-gradient(89.29deg,#FFFFFF_10%,#763AF5_76.63%,#A604F2_104.63%)] bg-clip-text text-transparent">made this far!</span>
             </h2>
-            <p className="text-gray-400 mb-8">
+            <p className="text-[#FFFFFF] text-xs sm:text-sm ">
               If you are looking for redesigning an existing App/website or
               building one from the scratch, we have the expertise to convert
               your dream into reality.
-            </p>
-            <p className="text-white font-semibold mb-6">
+              <br />
               Feel Free To Contact Us if:
             </p>
+            {/* <p className="text-white font-semibold mb-6">
+              Feel Free To Contact Us if:
+            </p> */}
 
-            <ul className="space-y-3 text-gray-300">
+            <ul className=" text-[#FFFFFF] mt-10 text-xs sm:text-sm">
               {reasons.map((reason, index) => (
                 <li key={index} className="flex items-start gap-2">
                   <span className="text-white mt-1">✱</span>
@@ -45,7 +47,7 @@ export default function MadeThisFar() {
                 src="/contact-us/made_this_far.svg"
                 alt="Development illustration"
                 fill
-                className="object-contain"
+                className="h-full w-full object-contain "
               />
             </div>
           </div>

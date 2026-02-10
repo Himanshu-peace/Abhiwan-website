@@ -27,7 +27,7 @@ export default function PortfolioSlider({
     return (
         <div className="mb-10">
             {/* MAIN IMAGE (UNCHANGED) */}
-            <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
+            <div className="relative aspect-video rounded-xl overflow-hidden">
                 <Image
                     src={`${process.env.NEXT_PUBLIC_CDN_URL}${portfolioImages[activeIndex]}`}
                     alt="Portfolio Preview"
@@ -67,7 +67,7 @@ export default function PortfolioSlider({
                         <SwiperSlide key={i}>
                             <button
                                 onClick={() => setActiveIndex(i)}
-                                className={`relative aspect-[4/3] w-full rounded-md overflow-hidden border-2 ${activeIndex === i
+                                className={`relative aspect-4/3 w-full rounded-md overflow-hidden border-2 ${activeIndex === i
                                     ? "border-purple-500"
                                     : "border-transparent"
                                     }`}
