@@ -37,12 +37,12 @@ const LOCATIONS = [
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-gradient-to-b from-black to-[#0b0b0b] text-white">
+    <footer className="w-full bg-linear-to-b from-black to-[#0b0b0b] text-white">
 
       {/* LOGO */}
       <div className="pt-10 text-center">
         <div className="mx-auto max-w-4xl px-6 sm:px-10">
-          <div className="relative h-[80px] md:h-[120px]">
+          <div className="relative h-20 md:h-30">
             <Image
               src="/footer_logo/abhiwan_footer_text.png"
               alt="Abhiwan Technology Logo"
@@ -56,7 +56,7 @@ export default function Footer() {
 
 
       {/* LOCATIONS */}
-      <div className="mt-12 max-w-[1280px] mx-auto px-6">
+      <div className="mt-12 max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-y-10">
 
           {LOCATIONS.map((item, index) => {
@@ -80,7 +80,7 @@ export default function Footer() {
                     aria-hidden
                     className="
                 absolute right-0 top-3 bottom-3 w-[0.5px]
-                bg-gradient-to-b
+                bg-linear-to-b
                 from-[#0D0D0D] via-[#9E9E9E] to-[#0D0D0D]
                 md:hidden
               "
@@ -93,7 +93,7 @@ export default function Footer() {
                     aria-hidden
                     className="
                 absolute left-4 right-4 bottom-0 h-[0.5px]
-                bg-gradient-to-r
+                bg-linear-to-r
                 from-[#0D0D0D] via-[#9E9E9E] to-[#0D0D0D]
                 md:hidden
               "
@@ -109,7 +109,7 @@ export default function Footer() {
                     className="
                 hidden md:block
                 absolute right-0 top-3 bottom-3 w-[0.85px]
-                bg-gradient-to-b
+                bg-linear-to-b
                 from-[#0D0D0D] via-[#9E9E9E] to-[#0D0D0D]
               "
                   />
@@ -141,7 +141,7 @@ export default function Footer() {
                       block
                       mt-0.5
                       text-[13px]
-                      leading-[15px]
+                      leading-3.75
                       font-semibold
                       font-inter
                       text-white
@@ -160,7 +160,7 @@ export default function Footer() {
       </div>
 
       {/* LINKS */}
-      <div className="mt-12 max-w-[1280px] mx-auto px-6">
+      <div className="mt-12 max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-10 text-sm">
 
           <FooterColumn title="OUR COMPANY">
@@ -198,7 +198,7 @@ export default function Footer() {
 
           <FooterColumn
             title="FOLLOW US ON"
-            className="order-5 col-span-2 md:order-none md:col-span-1"
+            className="order-5 col-span-2 md:order-0 md:col-span-1"
           >
             <div className="flex flex-col gap-2 justify-center align-center">
               {/* Social buttons */}
@@ -245,7 +245,7 @@ export default function Footer() {
       <div className="mt-12 border-t border-white/10">
         <div
           className="
-            max-w-[1280px]
+            max-w-7xl
             mx-auto
             px-6
             py-6
@@ -361,7 +361,7 @@ function SocialButton({
       href={socialHref}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center gap-2 bg-[#1a1a1a] px-3 py-2 rounded-md w-full md:min-w-[140px] justify-center md:justify-start text-xs hover:bg-[#2a2a2a] transition-colors"
+      className="flex items-center gap-2 bg-[#1a1a1a] px-3 py-2 rounded-md w-full md:min-w-35 justify-center md:justify-start text-xs hover:bg-[#2a2a2a] transition-colors"
     >
       {icon}
       <span>{label}</span>
