@@ -234,13 +234,14 @@ export default function LeadModal() {
         <AnimatePresence>
             {isModalOpen && (
                 <motion.div
-                    className="fixed inset-0 z-99999 flex items-start md:items-center justify-center bg-black/60 backdrop-blur-md pt-16 md:pt-0 px-4 pb-4 md:p-4"
+                    className="fixed inset-0 z-99999 flex items-start md:items-center justify-center bg-black/60 backdrop-blur-md pt-10 md:pt-0 px-4 pb-4 md:p-4"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     onClick={handleCloseModal}
                 >
                     {/* MODAL - Slides from right */}
+                    {/*  */}
                     <motion.div
                         initial={{ x: "100%", opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
@@ -256,27 +257,27 @@ export default function LeadModal() {
                         {/* CLOSE */}
                         <button
                             onClick={handleCloseModal}
-                            className="absolute right-4 top-4 z-50 bg-white/80 backdrop-blur hover:bg-white text-gray-800 rounded-full p-2 shadow-lg transition-all"
+                            className="absolute right-4 top-3 md:right-4 md:top-4 z-50 bg-white/80 backdrop-blur hover:bg-white text-gray-800 rounded-xs md:p-2 shadow-lg transition-all"
                             aria-label="Close modal"
                         >
                             <X size={20} />
                         </button>
 
                         {/* LEFT FORM */}
-                        {/* LEFT FORM */}
-                        <div className="flex flex-col h-full p-4 sm:p-6 md:p-8 lg:p-10">
+                        <div className="flex flex-col h-full p-3 md:p-8 lg:p-10">
                             <div className="shrink-0">
-                                <h2 className="text-md sm:text-lg md:text-xl font-bold text-[#0b0b3b] leading-snug">
-                                Have an idea buzzing in your head?
-                                Let's make it happen!
-                            </h2>
+                                <h2 className="text-md  md:text-xl font-bold text-[#0b0b3b] leading-snug">
+                                    Have an idea buzzing in your head?
+                                    <br className="md:hidden"/>
+                                    Let's make it happen!
+                                </h2>
                             </div>
 
-                            <form onSubmit={handleSubmit} className="flex flex-col flex-1 justify-between mt-4 sm:mt-5 space-y-3 sm:space-y-4">
-                                <div className="space-y-2">
+                            <form onSubmit={handleSubmit} className="flex flex-col flex-1 justify-between mt-1 md:mt-2  md:space-y-4">
+                                <div className="space-y-2 sm:space-y-1">
                                     {/* FULL NAME */}
                                     <div>
-                                        <label className="text-xs sm:text-sm font-medium text-gray-700">
+                                        <label className="text-xs md:text-sm font-medium text-gray-700">
                                             Full name<span className="text-red-500">*</span>
                                         </label>
                                         <input
@@ -295,7 +296,7 @@ export default function LeadModal() {
 
                                     {/* EMAIL */}
                                     <div>
-                                        <label className="text-xs sm:text-sm font-medium text-gray-700">
+                                        <label className="text-xs md:text-sm font-medium text-gray-700">
                                             Email<span className="text-red-500">*</span>
                                         </label>
                                         <input
@@ -314,7 +315,7 @@ export default function LeadModal() {
 
                                     {/* REQUIREMENT */}
                                     <div>
-                                        <label className="text-xs sm:text-sm font-medium text-gray-700">
+                                        <label className="text-xs md:text-sm font-medium text-gray-700">
                                             Requirement<span className="text-red-500">*</span>
                                         </label>
                                         <div className="relative">
@@ -379,7 +380,7 @@ export default function LeadModal() {
 
                                     {/* PHONE WITH COUNTRY - Matching HeroForm style */}
                                     <div>
-                                        <label className="text-xs sm:text-sm font-medium text-gray-700">
+                                        <label className="text-xs md:text-sm font-medium text-gray-700">
                                             Phone number<span className="text-red-500">*</span>
                                         </label>
 
@@ -449,13 +450,13 @@ export default function LeadModal() {
                                     </div>
                                     <div className="shrink-0  ">
                                         {/* INFO */}
-                                        <ul className="pt-2 sm:text-xs text-gray-600 space-y-1">
+                                        <ul className="pt-2 text-xs md:text-sm text-gray-600 space-y-1">
                                             <li>✓ Get a response in few minutes.</li>
                                             <li>✓ Your idea stays 100% protected under NDA.</li>
                                         </ul>
 
                                         {/* NDA */}
-                                        <label className="flex items-center gap-2 text-xs sm:text-sm text-gray-600 cursor-pointer">
+                                        <label className="flex items-center gap-2 text-xs md:text-sm text-gray-600 cursor-pointer">
                                             <input type="checkbox" defaultChecked className="w-4 h-4 sm:w-3 sm:h-3 lg:w-4 lg:h-4" />
                                             Receive a copy of the NDA for full security
                                         </label>
@@ -475,6 +476,21 @@ export default function LeadModal() {
                                         >
                                             {isSubmitting ? 'Submitting...' : 'Submit'}
                                         </button>
+                                    </div>
+
+                                    <div
+                                        className="md:hidden mt-2 shrink-0 grid grid-flow-col auto-cols-max items-center justify-center gap-3 bg-[#1D2135] px-2 lg:px-3 py-4 rounded-xl overflow-hidden"
+                                        
+                                    >
+                                        {CERTIFICATIONS.slice(0, 6).map((cert: any) => (
+                                            <img
+                                                key={cert.name}
+                                                src={process.env.NEXT_PUBLIC_CDN_URL + cert.image}
+                                                alt={cert.name}
+                                                className="h-7  lg:h-12 object-contain" // responsive height
+                                                style={{ width: "auto" }} // maintain aspect ratio
+                                            />
+                                        ))}
                                     </div>
                                 </div>
 
