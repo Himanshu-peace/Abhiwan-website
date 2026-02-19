@@ -242,7 +242,7 @@ export default function BrandsSection() {
         </p>
 
         {/* GRID WRAPPER */}
-        <div className="relative h-[280px] md:h-[420px]">
+        <div className="relative h-70 md:h-105">
           {pages.map((logos, pageIndex) => (
             <div
               key={pageIndex}
@@ -276,13 +276,18 @@ export default function BrandsSection() {
           {/* GRID LINES (STATIC) */}
           <div className="pointer-events-none absolute inset-0">
             {/* Vertical */}
-            <div className="absolute inset-y-0 left-1/3 w-px bg-white/30" />
-            <div className="absolute inset-y-0 left-2/3 w-px bg-white/30" />
+            <div className="absolute inset-y-0 left-1/3 w-px bg-linear-to-b
+                      from-[#171635] via-[#9E9E9E] to-[#171635]" />
+            <div className="absolute inset-y-0 left-2/3 w-px bg-linear-to-b
+                      from-[#171635] via-[#9E9E9E] to-[#171635]" />
 
             {/* Horizontal */}
-            <div className="absolute inset-x-0 top-1/2 h-px bg-white/30 md:hidden" />
-            <div className="absolute inset-x-0 top-1/3 h-px bg-white/30 hidden md:block" />
-            <div className="absolute inset-x-0 top-2/3 h-px bg-white/30 hidden md:block" />
+            <div className="absolute inset-x-0 top-1/2 h-px bg-linear-to-r
+                      from-[#171635] via-[#9E9E9E] to-[#171635] md:hidden" />
+            <div className="absolute inset-x-0 top-1/3 h-px bg-linear-to-r
+                      from-[#171635] via-[#9E9E9E] to-[#171635] hidden md:block" />
+            <div className="absolute inset-x-0 top-2/3 h-px bg-linear-to-r
+                      from-[#171635] via-[#9E9E9E] to-[#171635] hidden md:block" />
           </div>
         </div>
 

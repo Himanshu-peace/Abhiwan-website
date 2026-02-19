@@ -1,25 +1,11 @@
-
-
-
-
 "use client";
 
-
-
 import { useState } from "react";
-
 import Image from "next/image";
-
 import { motion, AnimatePresence, color } from "framer-motion";
-
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
-
 import { image } from "framer-motion/client";
-
 import { stat } from "fs";
-
-
-
 
 
 
@@ -37,16 +23,6 @@ import { stat } from "fs";
 // https://cdn.abhiwandemos.com/api/files/pbc_193071544/l4ho5qwz2796d3b/thums_up_s_biryani_hunt_ft4q1i31h8.webp
 
 // https://cdn.abhiwandemos.com/api/files/pbc_193071544/0818z44aaljd2k9/vaseline_suncoins_3fskz8x77c.webp
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -283,14 +259,11 @@ export default function CaseStudiesClone() {
     ];
 
 
-
     const [index, setIndex] = useState(0);
 
     const total = CASE_STUDIES.length;
 
     const currentData = CASE_STUDIES[index];
-
-
 
     const next = () => setIndex((p) => (p + 1) % total);
 
@@ -302,9 +275,7 @@ export default function CaseStudiesClone() {
 
         <section className="w-full bg-white font-sans text-black overflow-hidden">
 
-            <div className="max-w-[1440px] mx-auto px-4 md:px-16 py-8 lg:py-12">
-
-
+            <div className="max-w-360 mx-auto px-4 md:px-16 py-8 lg:py-12">
 
                 {/* ================= MOBILE & TABLET ================= */}
 
@@ -368,35 +339,23 @@ export default function CaseStudiesClone() {
 
                         </div>
 
-
-
-                        <div className="flex gap-4">
-
-                            <button onClick={prev} className="p-1 hover:bg-gray-100 rounded-full transition-colors">
-
-                                <ArrowLeft className="w-5 h-5 md:w-7 md:h-7" />
-
+                        <div className="flex gap-4 h-fit">
+                            <button onClick={prev}>
+                                <img src="/left-arrow-case.png" alt="Arrow Left" className="w-10 h-10" />
                             </button>
 
-                            <button onClick={next} className="p-1 hover:bg-gray-100 rounded-full transition-colors">
-
-                                {/* <ArrowRight className="w-5 h-5 md:w-7 md:h-7" /> */}
-
-                                <img src="/arrow1.png" alt="" />
-
+                            <button onClick={next}>
+                                <img src="/right-arrow-case.png" alt="Arrow Left" className="w-10 h-10" />
                             </button>
-
                         </div>
 
                     </div>
-
-
 
                     {/* IMAGE - Taller for tablet */}
 
                     <div className="relative w-full overflow-hidden rounded-lg bg-black/5 mb-6">
 
-                        <div className="relative h-[240px] md:h-[380px] w-full">
+                        <div className="relative h-60 md:h-95 w-full">
 
                             <AnimatePresence mode="wait">
 
@@ -456,7 +415,7 @@ export default function CaseStudiesClone() {
 
                         {/* BRAND */}
 
-                        <div className="relative h-[14px] md:h-[28px] overflow-hidden">
+                        <div className="relative h-3.5 md:h-7 overflow-hidden">
 
                             <AnimatePresence mode="wait">
 
@@ -488,7 +447,7 @@ export default function CaseStudiesClone() {
 
                         {/* TITLE - Fixed height based on max lines */}
 
-                        <div className="relative min-h-[42px] md:min-h-[64px] overflow-hidden">
+                        <div className="relative min-h-11 sm:min-h-8 md:min-h-16 overflow-hidden">
 
                             <AnimatePresence mode="wait">
 
@@ -520,7 +479,7 @@ export default function CaseStudiesClone() {
 
                         {/* DESCRIPTION - Fixed height for 3-4 lines */}
 
-                        <div className="relative min-h-[80px] md:min-h-[96px] overflow-hidden">
+                        <div className="relative min-h-22 sm:min-h-20 md:min-h-24 overflow-hidden">
 
                             <AnimatePresence mode="wait">
 
@@ -612,7 +571,7 @@ export default function CaseStudiesClone() {
 
                         >
 
-                            <span className="relative z-10 bg-clip-text text-transparent bg-gradient-to-r from-[#3952FC] to-[#7F15DC] group-hover:text-white transition-colors">
+                            <span className="relative z-10 bg-clip-text text-transparent bg-linear-to-r from-[#3952FC] to-[#7F15DC] group-hover:text-white transition-colors">
 
                                 View Case Study
 
@@ -620,7 +579,7 @@ export default function CaseStudiesClone() {
 
                             <ArrowUpRight className="relative z-10 w-4 h-4 md:w-5 md:h-5 text-[#5D3FD3] group-hover:text-white transition-colors" />
 
-                            <div className="absolute inset-0 bg-gradient-to-r from-[#3952FC] to-[#7F15DC] opacity-0 group-hover:opacity-100 transition-opacity z-0" />
+                            <div className="absolute inset-0 bg-linear-to-r from-[#3952FC] to-[#7F15DC] opacity-0 group-hover:opacity-100 transition-opacity z-0" />
 
                         </button>
 
@@ -642,25 +601,16 @@ export default function CaseStudiesClone() {
 
                     </h2>
 
+                    <div className="w-full h-px bg-gray-400 mb-12" />
 
-
-                    <div className="w-full h-[1px] bg-gray-400 mb-12" />
-
-
-
-                    <div className="grid grid-cols-1 lg:grid-cols-[2.5fr_1px_1fr] border-b border-gray-100 pb-6">
-
-
+                    <div className="grid grid-cols-1  lg:grid-cols-[2.5fr_1px_1fr] border-b border-gray-100 pb-6">
 
                         {/* LEFT */}
-
                         <div className="lg:pr-16">
-
-
 
                             {/* IMAGE */}
 
-                            <div className="relative h-[450px] w-full overflow-hidden mb-8 bg-black/5 flex items-center justify-center">
+                            <div className="relative h-112.5 w-full overflow-hidden mb-8 bg-black/5 flex items-center justify-center">
 
                                 <AnimatePresence mode="wait">
 
@@ -722,15 +672,16 @@ export default function CaseStudiesClone() {
 
                                 {/* FEATURED */}
 
-                                <div className="flex items-start gap-2 pt-1">
+                                <div className=" pt-1">
+                                    <div className="flex gap-1 items-center justify-center">
+                                        <span className=" w-3 h-3 xl:w-4 xl:h-4 rounded-full bg-[#432BCE]" />
 
-                                    <span className="w-2.5 h-2.5 rounded-full bg-[#5D3FD3]" />
+                                        <span className="uppercase text-[#432BCE] text-sm xl:text-lg font-medium">
 
-                                    <span className="uppercase text-[#5D3FD3] text-sm font-medium">
+                                            Featured
 
-                                        Featured
-
-                                    </span>
+                                        </span>
+                                    </div>
 
                                 </div>
 
@@ -744,7 +695,7 @@ export default function CaseStudiesClone() {
 
                                     {/* BRAND */}
 
-                                    <div className="relative h-[24px] overflow-hidden">
+                                    <div className="relative h-6 overflow-hidden">
 
                                         <AnimatePresence mode="wait">
 
@@ -776,7 +727,7 @@ export default function CaseStudiesClone() {
 
                                     {/* TITLE */}
 
-                                    <div className="relative min-h-[80px] overflow-hidden">
+                                    <div className="relative lg:min-h-15 xl:min-h-20  overflow-hidden">
 
                                         <AnimatePresence mode="wait">
 
@@ -792,7 +743,7 @@ export default function CaseStudiesClone() {
 
                                                 transition={{ duration: 0.5 }}
 
-                                                className="absolute text-[24px] font-medium text-[#0E0E0E]"
+                                                className="absolute lg:text-[14px] xl:text-[20px] font-medium text-[#0E0E0E]"
 
                                             >
 
@@ -808,7 +759,7 @@ export default function CaseStudiesClone() {
 
                                     {/* DESC */}
 
-                                    <div className="relative min-h-[60px] overflow-hidden">
+                                    <div className="relative min-h-30 xl:min-h-15  overflow-hidden">
 
                                         <AnimatePresence mode="wait">
 
@@ -824,7 +775,7 @@ export default function CaseStudiesClone() {
 
                                                 transition={{ duration: 0.5 }}
 
-                                                className="absolute text-gray-500 text-[16px] leading-[20px]"
+                                                className="absolute text-gray-500 text-[12px] xl:text-[16px] leading-5"
 
                                             >
 
@@ -841,37 +792,21 @@ export default function CaseStudiesClone() {
                                     {/* BUTTON */}
 
                                     <div className="pt-2">
-
                                         <button
-
-                                            className="relative inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-xs font-bold transition-all group overflow-hidden"
-
+                                            className="relative inline-flex items-center gap-2 px-8 py-3.5 rounded-4xl xl:rounded-full text-xs font-bold transition-all group overflow-hidden"
                                             style={{
-
                                                 background:
-
                                                     "linear-gradient(white, white) padding-box, linear-gradient(270deg, #3952FC 0%, #7F15DC 100%) border-box",
-
                                                 border: "1.5px solid transparent",
-
                                             }}
-
                                         >
-
-                                            <span className="relative z-10 bg-clip-text text-transparent bg-gradient-to-r from-[#3952FC] to-[#7F15DC] group-hover:text-white transition-colors">
-
+                                            <span className="relative z-10 text-[10px] bg-clip-text text-transparent bg-linear-to-r from-[#3952FC] to-[#7F15DC] group-hover:text-white transition-colors">
                                                 View Case Study
-
                                             </span>
-
-                                            <ArrowUpRight className="relative z-10 w-4 h-4 text-[#5D3FD3] group-hover:text-white transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-
-                                            <div className="absolute inset-0 bg-gradient-to-r from-[#3952FC] to-[#7F15DC] opacity-0 group-hover:opacity-100 transition-opacity z-0" />
-
+                                            <ArrowUpRight className="relative z-10 w-8 h-8 xl:w-4 xl:h-4 text-[#5D3FD3] group-hover:text-white transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                                            <div className="absolute inset-0 bg-linear-to-r from-[#3952FC] to-[#7F15DC] opacity-0 group-hover:opacity-100 transition-opacity z-0" />
                                         </button>
-
                                     </div>
-
                                 </div>
 
 
@@ -880,9 +815,13 @@ export default function CaseStudiesClone() {
 
                                 <div className="hidden md:flex gap-4 h-fit">
 
-                                    <button onClick={prev}><ArrowLeft className="w-10 h-10" /></button>
+                                    <button onClick={prev}>
+                                        <img src="/left-arrow-case.png" alt="Arrow Left" className="w-11 h-12 xl:w-10 xl:h-12" />
+                                    </button>
 
-                                    <button onClick={next}><ArrowRight className="w-10 h-10" /></button>
+                                    <button onClick={next}>
+                                        <img src="/right-arrow-case.png" alt="Arrow Left" className="w-11 h-12 xl:w-10 xl:h-12" />
+                                    </button>
 
                                 </div>
 
@@ -892,7 +831,7 @@ export default function CaseStudiesClone() {
 
 
 
-                        <div className="hidden lg:block w-[1px] bg-gray-400" />
+                        <div className="hidden lg:block w-px bg-gray-400" />
 
 
 
@@ -946,7 +885,7 @@ export default function CaseStudiesClone() {
 
                                 {/* NUMBER */}
 
-                                <div className="relative h-[160px] min-w-[140px] overflow-hidden">
+                                <div className="relative h-40 min-w-35 overflow-hidden">
 
                                     <AnimatePresence mode="wait">
 
@@ -1018,12 +957,7 @@ export default function CaseStudiesClone() {
 
                     </div>
 
-
-
-                    <div className="w-full h-[1px] bg-gray-400 " />
-
-
-
+                    <div className="w-full h-px bg-gray-400 " />
                 </div>
 
             </div>

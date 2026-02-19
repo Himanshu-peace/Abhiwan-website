@@ -65,14 +65,14 @@ const ThankYouPage = () => {
         <div className="flex flex-col md:flex-row gap-6 justify-center mb-16">
           <Link
             href="/"
-            className="px-10 py-4 rounded-xl bg-gradient-to-r from-[#123C88] to-[#00C2D3] text-white text-lg font-medium shadow-lg hover:opacity-90 transition"
+            className="px-10 py-4 rounded-xl bg-linear-to-r from-[#123C88] to-[#00C2D3] text-white text-lg font-medium shadow-lg hover:opacity-90 transition"
           >
             Back to Homepage
           </Link>
 
           <Link
             href="/services"
-            className="px-10 py-4 rounded-xl bg-gradient-to-r from-[#123C88] to-[#00C2D3] text-white text-lg font-medium shadow-lg hover:opacity-90 transition"
+            className="px-10 py-4 rounded-xl bg-linear-to-r from-[#123C88] to-[#00C2D3] text-white text-lg font-medium shadow-lg hover:opacity-90 transition"
           >
             Explore Our Services
           </Link>
@@ -139,7 +139,7 @@ const Button: React.FC<ButtonProps> = ({ children, href }) => {
     <Link
       href={href}
       className="w-full sm:w-auto px-8 py-3.5 rounded-lg font-medium text-white 
-                 bg-gradient-to-b from-blue-800 to-cyan-600 
+                 bg-linear-to-b from-blue-800 to-cyan-600 
                  shadow-[0_4px_10px_rgba(0,100,200,0.3)]
                  hover:shadow-[0_6px_15px_rgba(0,100,200,0.4)]
                  hover:brightness-105 active:scale-[0.98]
@@ -163,7 +163,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ icon, title }) => {
       <div className="text-4xl text-cyan-600 group-hover:text-blue-700 transition-colors duration-300">
         {icon}
       </div>
-      <h4 className="text-sm sm:text-base font-medium text-slate-700 max-w-[120px] leading-tight">
+      <h4 className="text-sm sm:text-base font-medium text-slate-700 max-w-30 leading-tight">
         {title}
       </h4>
     </div>

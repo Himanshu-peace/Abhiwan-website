@@ -107,20 +107,20 @@ import { motion } from "framer-motion";
 
 export default function AboutSection() {
   return (
-    <section className="relative bg-white pt-0 overflow-visible -mt-22">
+    <section className="relative bg-white pt-0 overflow-visible -mt-22 mb-10 lg:mb-4">
       <AboutTopCurve />
 
       <div className="relative z-10 bg-white">
-        <div className="px-6 md:px-12 lg:px-16 pt-12 md:pt-20">
+        <div className="px-6 md:px-12 lg:px-24 pt-12 md:pt-20">
 
           {/* Layout container */}
           <div
             className="
               flex flex-col-reverse
-              lg:grid lg:grid-cols-[1.05fr_0.95fr]
+              lg:grid lg:grid-cols-[45%_55%]
               gap-12 lg:gap-10
               items-start
-              max-w-[1400px]
+              max-w-350
               mx-auto
             "
           >
@@ -140,8 +140,9 @@ export default function AboutSection() {
                       overflow-hidden
                       shadow-xl
                       border-4 border-white
-                      aspect-[4/3]
-                      lg:aspect-[16/10]
+                      aspect-4/3
+                      lg:aspect-16/15
+                      xl:aspect-16/11
                     "
                   >
                     <Image
@@ -161,20 +162,20 @@ export default function AboutSection() {
             <div className="space-y-6 md:pt-2">
               <h2
                 className="
-    font-futura
-    font-bold
-    text-[36px]
-    md:text-[48px]
-    lg:text-[60px]
-    leading-[1.1]
-    lg:leading-[60px]
-    tracking-[-0.02em]
-    uppercase
-    text-[var(--about-heading)]
-  "
+                  font-futura
+                  font-extrabold
+                  text-[36px]
+                  md:text-[48px]
+                  xl:text-[58px]
+                  leading-[1.1]
+                  lg:leading-[60px]
+                  tracking-[-0.02em]
+                  uppercase
+                  text-[var(--about-heading)]
+                "
               >
 
-                <span className="lg:whitespace-nowrap">
+                <span className=" lg:whitespace-nowrap">
                   IF YOU CAN DREAM IT,
                 </span>
                 <br />
@@ -199,7 +200,7 @@ export default function AboutSection() {
                 </p>
               </div>
 
-              <div className="pt-2 md:pt-4 my-10">
+              <div className="hidden lg:inline-block pt-2 md:pt-4 my-10">
                 <motion.a
                   href="#"
                   className="
@@ -229,7 +230,43 @@ export default function AboutSection() {
                       damping: 15
                     }}
                   >
-                    <ArrowUpRight className="w-6 h-6 md:w-7 md:h-7" />
+                    <ArrowUpRight className="w-6 h-6 md:w-7 md:h-7 text-blue-600 transition-transform duration-300 hover:rotate-45" />
+                  </motion.span>
+                </motion.a>
+              </div>
+
+              {/* for mobile */}
+              <div className="max-w-60 md:max-w-75 flex items-center justify-center p-2 my-10 lg:hidden border-2 border-blue-600 rounded-full">
+                <motion.a
+                  href="#"
+                  className="
+                    inline-flex
+                    items-center
+                    gap-2
+                    text-lg md:text-xl
+                    font-bold
+                    text-blue-600
+                    transition-colors
+                    duration-300
+                  "
+                  whileHover={{ color: "#3952FC" }}
+                >
+                  Know More About Us
+                  <motion.span
+                    className="inline-block"
+                    initial={{ rotate: 70 }}
+                    whileInView={{ rotate: 0 }}
+                    whileHover={{
+                      rotate: 0,
+                      x: 6
+                    }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 15
+                    }}
+                  >
+                    <ArrowUpRight className="w-6 h-6 md:w-7 md:h-7 text-blue-600 transition-transform duration-300 hover:rotate-45" />
                   </motion.span>
                 </motion.a>
               </div>

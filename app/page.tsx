@@ -6,7 +6,8 @@ import ServicePage from "@/components/home/servicepage";
 import { TrustedSection } from "@/components/home/truestedsection";
 import CaseStudies from "@/components/home/casestudies";
 import BuildHomeSection from "@/components/home/buildhomesection";
-import { PortfolioSection } from "@/components/home/portfoliosection";
+// import { PortfolioSection } from "@/components/home/portfoliosection";
+import PortfolioSection from "@/components/home/portfolioSection1";
 import BrandsSection from "@/components/home/Homebrandsection";
 import SuccessSection from "@/components/home/sucesssection";
 import TestimonialsSection from "@/components/programatic_seo/testimonial";
@@ -27,6 +28,7 @@ export default function Home() {
       <CaseStudies />
       <BuildHomeSection />
       <PortfolioSection />
+
       <BrandsSection />
       <SuccessSection />
       <TestimonialsSection />

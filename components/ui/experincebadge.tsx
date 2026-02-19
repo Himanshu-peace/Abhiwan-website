@@ -86,13 +86,13 @@ export default function ExperienceBadge() {
       className="
         absolute
         -top-10 left-4
-        lg:top-auto lg:-bottom-16 lg:-left-16 lg:ml-4  /* add left margin on laptop */
+        lg:top-auto lg:-bottom-22 lg:-left-18 lg:ml-10  /* add left margin on laptop */
         z-20
         rounded-2xl
         p-4 lg:p-8
         text-white
         shadow-2xl
-        min-w-[140px] lg:min-w-[160px]
+        min-w-35 lg:min-w-40
         text-center
       "
       style={{

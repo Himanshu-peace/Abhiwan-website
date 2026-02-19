@@ -455,6 +455,7 @@
 "use client"
 import React from 'react'
 import CountUp from '../common/countup'
+import {motion } from "framer-motion"
 
 const stats = [
     { label: "YEARS OF EXPERIENCE", value: "7+" },
@@ -733,7 +734,7 @@ export default function SuccessSection() {
                 <div className="w-full">
 
                     {/* ---------- HEADING ---------- */}
-                    <div className="mb-12 my-6">
+                    <div className="mb-12 my-6 ml-4">
                         <h2
                             className="uppercase font-futura text-start whitespace-nowrap leading-none"
                             style={{
@@ -776,10 +777,21 @@ export default function SuccessSection() {
 
                     {/* ---------- MOBILE IMAGE (comes after heading) ---------- */}
                     <div className="relative w-full max-w-[320px] mx-auto mb-12 lg:hidden">
+                            <motion.img
+                                src="/Rotate-balls.png"
+                                alt="Rotating circles"
+                                className="absolute z-10 w-[95%] object-contain"
+                                animate={{ rotate: 360 }}
+                                transition={{
+                                repeat: Infinity,
+                                ease: "linear",
+                                duration: 5,
+                                }}
+                            />
                         <img
                             src="/scoreboard.png"
                             alt="Developer illustration"
-                            className="w-full object-contain"
+                            className=" relativew-full z-20 object-contain"
                         />
                     </div>
 
@@ -792,7 +804,7 @@ export default function SuccessSection() {
                                 {features.map((item, idx) => (
                                     <div
                                         key={idx}
-                                        className="flex flex-col items-center text-center px-4 md:px-0"
+                                        className="flex flex-col items-center  px-4 md:px-0"
                                     >
                                         {/* NUMBER + TITLE */}
                                         <h3
@@ -813,7 +825,7 @@ export default function SuccessSection() {
                                                     fontSize: "24px",
                                                     lineHeight: "32px",
                                                     background: `linear-gradient(0deg, #74118C, #74118C),
-                          linear-gradient(90.4deg, #1C1C1C 31.08%, #763AF5 64.2%, #A604F2 98.85%)`,
+                                                      linear-gradient(90.4deg, #1C1C1C 31.08%, #763AF5 64.2%, #A604F2 98.85%)`,
                                                     WebkitBackgroundClip: "text",
                                                     WebkitTextFillColor: "transparent",
                                                 }}
@@ -824,17 +836,17 @@ export default function SuccessSection() {
 
                                         {/* DESCRIPTION */}
                                         <p
-                                            className="font-inter font-normal text-gray-500 text-[19.51px] leading-[28px] tracking-normal max-w-[400px]"
-                                            style={{
-                                                textAlign: "center",
-                                            }}
+                                            className="font-inter font-normal text-gray-500 text-[19.51px] leading-[28px] tracking-normal "
+                                            // style={{
+                                            //     textAlign: "center",
+                                            // }}
                                         >
                                             {item.description}
                                         </p>
 
-                                        {/* HORIZONTAL DIVIDER */}
+                                        {/* HORIZONTAL DIVIDER for mobile*/}
                                         <div
-                                            className="mt-6 h-[1px] w-full max-w-[280px]"
+                                            className="md:hidden  mt-6 h-[1px] w-full max-w-[280px]"
                                             style={{
                                                 background:
                                                     "linear-gradient(90deg, transparent, #CECECE, transparent)",
@@ -872,19 +884,29 @@ export default function SuccessSection() {
 
                         {/* ---------- DESKTOP IMAGE (RIGHT SIDE ONLY) ---------- */}
                         <div className="relative w-full max-w-[400px] aspect-square hidden lg:flex items-center justify-center">
-                            <div className="absolute inset-0 border border-dashed border-gray-200 rounded-full animate-[spin_20s_linear_infinite]" />
-                            <div className="absolute inset-8 border border-dashed border-gray-200 rounded-full" />
 
-                            <div className="absolute top-1/4 -left-2 w-3 h-3 bg-purple-400 rounded-full shadow-[0_0_10px_rgba(168,85,247,0.5)]" />
-                            <div className="absolute bottom-1/4 -right-2 w-3 h-3 bg-cyan-300 rounded-full shadow-[0_0_10px_rgba(34,211,238,0.5)]" />
-                            <div className="absolute bottom-1/4 left-4 w-2 h-2 bg-green-300 rounded-full" />
+                            {/* Rotating Circles */}
+                            <motion.img
+                                src="/Rotate-balls.png"
+                                alt="Rotating circles"
+                                className="absolute w-[95%] object-contain z-10"
+                                animate={{ rotate: 360 }}
+                                transition={{
+                                repeat: Infinity,
+                                ease: "linear",
+                                duration: 5,
+                                }}
+                            />
 
+                            {/* Still Image */}
                             <img
                                 src="/scoreboard.png"
-                                alt="Developer illustration"
-                                className="relative z-10 w-[85%] object-contain"
+                                alt="Scoreboard"
+                                className="relative z-20 w-[95%] object-contain"
                             />
+
                         </div>
+
 
                     </div>
                 </div>

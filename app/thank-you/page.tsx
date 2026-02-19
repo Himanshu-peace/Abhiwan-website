@@ -15,7 +15,88 @@ export default function Thankyou() {
     );
 }
 
-// gemenis page
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// >>
 // import React from 'react';
 // import Link from 'next/link';
 // import {
@@ -208,7 +289,7 @@ export default function Thankyou() {
 // export default ThankYouPage;
 
 
-// claudes page
+// >>
 // "use client";
 
 // import type { NextPage } from "next";
@@ -558,7 +639,7 @@ export default function Thankyou() {
 // export default ThankYouPage;
 
 
-// chat gpts page
+// >>
 // import Image from "next/image";
 // import Link from "next/link";
 // import { JSX } from "react";
