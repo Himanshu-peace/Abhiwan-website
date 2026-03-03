@@ -4,19 +4,15 @@ import React, { useState, useRef, useCallback } from 'react';
 
 interface IndustryCardProps {
   title: string;
-  bgColor: string;
-  iconColor: string;
   icon: React.ReactNode;
 }
 
-const IndustryCard: React.FC<IndustryCardProps> = ({ title, bgColor, iconColor, icon }) => {
+const IndustryCard: React.FC<IndustryCardProps> = ({ title, icon }) => {
   return (
-    <div className={`${bgColor} rounded-xl p-8  flex flex-col items-center justify-center gap-6 aspect-square  hover:shadow-[0_0px_40px_rgba(0,0,0,0.20)]`}>
-      <h3 className={`text-base md:text-lg font-semibold ${iconColor}`}>{title}</h3>
-      <div className={`w-[8.75rem] h-[8.75rem] ${iconColor} flex items-center justify-center`}>
+    <div className={`relative rounded-xl aspect-square  `}>
         {icon}
-      </div>
-    </div>
+      <h3 className={`absolute bottom-1 sm:bottom-0 lg:-bottom-2 xl:bottom-1 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center uppercase text-white text-2xl md:text-2xl xl:text-3xl font-extrabold leading-8 md:leading-9`}>{title}</h3>
+    </div> 
   );
 };
 
@@ -75,13 +71,13 @@ function BeforeAfterSlider() {
   return (
     <div
       ref={containerRef}
-      className="relative h-screen mx-30 rounded-3xl overflow-hidden cursor-ew-resize select-none"
-      style={{ aspectRatio: "16/9" }}
+      className="relative aspect-video mx-3 md:mx-10 lg:mx-30 rounded-3xl overflow-hidden cursor-ew-resize select-none"
+    //   style={{ aspectRatio: "16/9" }}
       onMouseDown={handleMouseDown}
       onTouchStart={handleTouchStart}
     >
       {/* Right side (pink slipper) */}
-      <div className="relative h-screen inset-0  flex items-center justify-center">
+      <div className="relative  inset-0  flex items-center justify-center">
         <div className=" flex items-center justify-end ">
           <div className="relative">
             <img src="/3d-product/color-shoes.webp" alt="Wireframe" className="w-full h-full object-cover" />
@@ -95,9 +91,7 @@ function BeforeAfterSlider() {
         style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
       >
         {/* 3d-product slipper */}
-        <div className="relative">
-          <img src="/3d-product/mono-shoes.webp" alt="Wireframe" className="w-full h-full" />
-        </div>
+        <img src="/3d-product/mono-shoes.webp" alt="Wireframe" className="w-full h-full" />
       </div>
 
       {/* Slider handle */}
@@ -107,9 +101,9 @@ function BeforeAfterSlider() {
       >
         <div className="w-0.75 h-full bg-white/70" />
         <div className="absolute flex items-center gap-2 bg-white rounded-full px-3 py-1.5 shadow-lg">
-          {/* <img src="/3d-product/left-arrow.svg" alt="left arrow" className="w-6 h-3 text-gray-600" /> */}
+          {/* <img src="/3d-product/left arrow.svg" alt="left arrow" className="w-6 h-3 text-gray-600" /> */}
           <img src="/3d-product/slider.svg" alt="slider" className="w-6 h-3 text-gray-600" />
-          {/* <img src="/3d-product/right-arrow.svg" alt="right arrow" className="w-6 h-3 text-gray-600" /> */}
+          {/* <img src="/3d-product/right arrow.svg" alt="right arrow" className="w-6 h-3 text-gray-600" /> */}
         </div>
       </div>
     </div>
@@ -139,44 +133,36 @@ export default function ThreeDModelingSection() {
         <BeforeAfterSlider />
 
         {/* Industries cards section */}
-        <div className="w-full bg-white rounded-b-3xl pt-40 pb-16 px-6 -mt-30">
+        <div className="w-full bg-white pt-15 sm:pt-20 lg:pt-40 pb-16 px-6 -mt-30">
             {/* Industries Section */}
             <div className="w-full flex flex-col items-center pt-24 px-6 text-center">
-                <h2 className="text-3xl md:text-7xl font-black text-black mb-18 ">
+                <h2 className="text-3xl sm:text-5xl lg:text-7xl font-black text-black mb-18 ">
                     INDUSTRIES WE SERVE
                 </h2>
 
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 w-full max-w-7xl">
+                <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 w-full max-w-7xl">
                     <IndustryCard
                     title="Jewellery"
-                    bgColor="bg-[#F0C9FF]"
-                    iconColor="text-[#8616B2]"
                     icon={
-                        <img src="/3d-product/jewellery.png" alt="Jewellery" className="w-full h-full" />
+                        <img src="/3d-product/jewellery.webp" alt="Jewellery" className="w-full h-full object-fill" />
                     }
                     />
                     <IndustryCard
                     title="Electronics"
-                    bgColor="bg-[#FFC9C9]"
-                    iconColor="text-[#985C5C]"
                     icon={
-                        <img src="/3d-product/headset.png" alt="Jewellery" className="w-full h-full" />
+                        <img src="/3d-product/headset.webp" alt="Jewellery" className="w-full h-full object-fill" />
                     }
                     />
                     <IndustryCard
                     title="Kitchenware"
-                    bgColor="bg-[#C9D2FF]"
-                    iconColor="text-[#636EA7]"
                     icon={
-                        <img src="/3d-product/kitchen-pot.png" alt="Jewellery" className="w-full h-full" />
+                        <img src="/3d-product/kitchen.webp" alt="Jewellery" className="w-full h-full object-fill" />
                     }
                     />
                     <IndustryCard
-                    title="Fashion & More"
-                    bgColor="bg-[#E2FFF5]"
-                    iconColor="text-[#51977F]"
+                    title="Fashion"
                     icon={
-                        <img src="/3d-product/fashion.png" alt="Jewellery" className="w-full h-full" />
+                        <img src="/3d-product/fashion.webp" alt="Jewellery" className="w-full h-full object-fill" />
                     }
                     />
                 </div>
@@ -186,7 +172,7 @@ export default function ThreeDModelingSection() {
                     Get high-quality, accurate, and visually stunning renders that elevate your brand.
                 </p>
 
-                <button className="mt-8 bg-gradient-to-r from-[#7F15DC] to-[#3952FC] text-white px-8 py-3.5 rounded-full font-medium flex items-center gap-2  transition-colors group">
+                <button className="mt-8 bg-linear-to-r from-[#7F15DC] to-[#3952FC] text-white px-8 py-3.5 rounded-full font-medium flex items-center gap-2  transition-colors group">
                     Start With Us Now
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-7 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform">
                     <path d="M7 17L17 7M17 7H7M17 7V17" />
@@ -194,8 +180,6 @@ export default function ThreeDModelingSection() {
                 </button>
             </div>
         </div>
-        
-      <div className="h-16 w-full"></div>
     </section>
   );
 }
