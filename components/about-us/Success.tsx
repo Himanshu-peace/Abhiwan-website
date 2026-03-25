@@ -98,7 +98,7 @@ export default function Success() {
                                 key={idx}
                                 className="relative p-6 md:p-12 flex flex-col items-center"
                             >
-                                {/* VERTICAL DIVIDER — only between middle items */}
+                                {/* VERTICAL DIVIDER */}
                                 {idx !== 0 && idx !== stats.length  && (
                                     <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 h-[70%] w-px  bg-linear-to-b from-[#171635] via-[#9E9E9E] to-[#171635]" />
                                 )}
@@ -123,7 +123,7 @@ export default function Success() {
                                     </div>
 
                                     <div
-                                        className="break-words mb-4"
+                                        className="wrap-break-word mb-4"
                                         style={{
                                             fontFamily: '"Futura PT", sans-serif',
                                             fontWeight: 700,
@@ -231,7 +231,7 @@ export default function Success() {
                         <div className="pointer-events-none absolute inset-0 z-0">
                             {/* Vertical Divider */}
                             <div
-                                className="absolute top-0 bottom-0 left-1/2 w-[2px]"
+                                className="absolute top-0 bottom-0 left-1/2 w-0.5"
                                 style={{
                                     background:
                                         "linear-gradient(180deg, #FFFFFF 0%, #CECECE 50.51%, #FFFFFF 100%)",
@@ -240,7 +240,7 @@ export default function Success() {
                             />
                             {/* Horizontal Divider */}
                             <div
-                                className="absolute left-0 right-0 top-1/2 h-[2px]"
+                                className="absolute left-0 right-0 top-1/2 h-0.5"
                                 style={{
                                     background:
                                         "linear-gradient(90deg, #FFFFFF 0%, #CECECE 50.51%, #FFFFFF 100%)",
